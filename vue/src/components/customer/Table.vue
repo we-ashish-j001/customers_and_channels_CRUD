@@ -37,7 +37,7 @@
       <th style="width: 50px">Id</th>
       <th style="width: 200px">Name</th>
       <th style="width: 250px">Country</th>
-      <th style="width: 100px" v-if="$route.path === '/' && customerStore.sidebar===false">Channel</th>
+      <th style="width: 100px" v-if="$route.path === '/' && customerStore.sidebar===false">Channels</th>
       <th style="width: 90px" v-if="$route.path === '/'">Is Active</th>
       <th style="width: 200px">Created At</th>
       <th style="width: 150px">Action</th>
