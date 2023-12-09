@@ -7,19 +7,19 @@
                      @click.prevent = "customerStore.resetState();
                      customerStore.getCountries(); customerStore.sidebar = false"
                      class="mr-3">
-          <button class="button is-link is-small"  >
+          <button class="button is-link is-outlined is-small" >
           Create Customer
           </button>
         </router-link>
         <div  class="mr-3">
-            <button :disabled="$route.path !== '/'" class="button is-link is-small"
+            <button :disabled="$route.path !== '/'" class="button is-link is-outlined p-2 is-small"
                                       @click.prevent="customerStore.sidebar=true;
                                       customerStore.getCountries()">
             Filter <span class="tag ml-2 is-rounded is-info">{{customerStore.filter_data.count}}</span>
           </button>
         </div>
         <div >
-          <button  class="button is-link is-small"
+          <button  class="button  is-link is-outlined is-small"
                   @click =" customerStore.resetFilter(); customerStore.getCustomer()">
             Reset Filter
           </button>

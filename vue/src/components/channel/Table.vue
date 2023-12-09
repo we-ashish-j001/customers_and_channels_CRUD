@@ -68,7 +68,7 @@
                      @click.prevent="channelStore.sidebar=false;channelStore.getChannelData(channel.id);
                            channelStore.getNotes(channel.id)">
           <span class="material-icons ">visibility</span></router-link>
-        <a><span v-if="channel.deleted_at === null" class="material-icons" @click="channelStore.trashChannel(channel.id)">delete</span>
+        <a><span style="color: indianred" v-if="channel.deleted_at === null" class="material-icons" @click="channelStore.trashChannel(channel.id)">delete</span>
           <span v-else class="material-icons" @click="channelStore.bulkRestore([channel.id])">restore</span></a>
 
       </td>

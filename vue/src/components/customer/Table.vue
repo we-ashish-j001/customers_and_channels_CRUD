@@ -90,7 +90,7 @@
                      customerStore.getNotes(customer.id)">
           <span class="material-icons ">visibility</span></router-link>
           <a>
-            <span v-if="customer.deleted_at === null" class="material-icons " @click="customerStore.trashCustomer(customer.id)">delete</span>
+            <span style="color: indianred" v-if="customer.deleted_at === null" class="material-icons " @click="customerStore.trashCustomer(customer.id)">delete</span>
             <span v-else class="material-icons ml-1" @click="customerStore.bulkRestore([customer.id])">restore</span>
           </a>
 
