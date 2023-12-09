@@ -5,22 +5,22 @@
         <router-link v-if="$route.path === '/channels/'+$route.params.id" class="mr-3"
                      :to="{path: '/channels/create/'+ $route.params.id}"
                      @click.prevent = "channelStore.sidebar=false;channelStore.resetState(); customerStore.getCustomerName($route.params.id)" >
-          <button class="button is-link is-small" >Create Channel</button>
+          <button class="button  is-link is-outlined is-small" >Create Channel</button>
         </router-link>
         <router-link v-if="$route.path !== '/channels/'+$route.params.id "
                      class="mr-3"  to="/channels/create"
                      @click.prevent = "channelStore.sidebar=false;channelStore.resetState()" >
-          <button class="button is-link is-small" >Create Channel</button>
+          <button class="button  is-link is-outlined is-small" >Create Channel</button>
         </router-link>
         <div class="mr-3">
           <button :disabled="$route.path !== '/channels' && $route.path !== '/channels/'+$route.params.id"
-                  class="button is-link is-small"
+                  class="button  is-link is-outlined is-small"
                   @click.prevent="channelStore.sidebar=true; customerStore.getCustomer()">
             Filter <span class="tag ml-2 is-rounded is-info">{{channelStore.filter_data.count}}</span>
           </button>
         </div>
         <div >
-          <button  class="button is-link is-small"
+          <button  class="button  is-link is-outlined is-small"
                    @click =" channelStore.resetFilter(); channelStore.getChannel()">
             Reset Filter
           </button>
